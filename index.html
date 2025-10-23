@@ -5,65 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=backspace,counter_0,counter_2,percent" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=backspace,percent" rel="stylesheet" />
    
 <body>
-    <section>
-        <main>
-            <div class="calculator">
-                <div class="display"></div>
-                <table>
-                    <thead class="memory-function">
-                        <th class="memory-button">MC</th>
-                        <th class="memory-button">MR</th>
-                        <th class="memory-button">M+</th>
-                        <th class="memory-button">M-</th>
-                        <th class="memory-button">MS</th>
-                    </thead>
-                    <tbody>
-                        <tr class="first-row">
-                            <td><span class="material-symbols-outlined">percent</span></td>
-                            <td class="clear-button">CE</td>
-                            <td class="clear-button">C</td>
-                            <td><span class="material-symbols-outlined">backspace</span></td>
-                        </tr>
-                        <tr class="second-row">
-                            <td><span class="material-symbols-outlined">counter_0</span></td>
-                            <td><span class="material-symbols-outlined">counter_2</span></td>
-                            <td class="operators">&radic;</td>
-                            <td class="operators">/</td>
-                        </tr>
-                        <tr class="third-row">
-                            <td class="numbers">7</td>
-                            <td class="numbers">8</td>
-                            <td class="numbers">9</td>
-                            <td class="operators">x</td>
-                        </tr>
-                        <tr class="fourth-row">
-                            <td class="numbers">4</td>
-                            <td class="numbers">5</td>
-                            <td class="numbers">6</td>
-                            <td class="operators">&minus;</td>
-                        </tr>
-                        <tr class="fifth-row">
-                            <td class="numbers">1</td>
-                            <td class="numbers">2</td>
-                            <td class="numbers">3</td>
-                            <td class="operators">+</td>
-                        </tr>
-                        <tr class="sixth-row">
-                            <td class="operators">+/-</td>
-                            <td class="numbers">0</td>
-                            <td class="operators">.</td>
-                            <td class="operators">=</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <section class="canvas">
+        <div class="calculator">
+            <div class="display"></div>
+            <div class="calc-body">
+                <div class="row">
+                    <div class="button"><span class="material-symbols-outlined">percent</span></div>
+                    <div class="button">CE</div>
+                    <div class="button">C</div>
+                    <div class="button"><span class="material-symbols-outlined">backspace</span></div>
+                </div>
+                <div class="row">
+                    <div class="button">R2</div>
+                    <div class="button">R0</div>
+                    <div class="button">&radic;</div>
+                    <div class="button">/</div>
+                </div>
+                <div class="row">
+                    <div class="button">7</div>
+                    <div class="button">8</div>
+                    <div class="button">9</div>
+                    <div class="button">*</div>
+                </div>
+                <div class="row">
+                    <div class="button">4</div>
+                    <div class="button">5</div>
+                    <div class="button">6</div>
+                    <div class="button">&minus;</div>
+                </div>
+                <div class="row">
+                    <div class="button">1</div>
+                    <div class="button">2</div>
+                    <div class="button">3</div>
+                    <div class="button">+</div>
+                </div>
+                <div class="row">
+                    <div class="button">+/-</div>
+                    <div class="button">0</div>
+                    <div class="button">.</div>
+                    <div class="button">=</div>
+                </div>
             </div>
-        </main>
-    </section>
-
-    
+        </div>
 
     <script src="script.js"></script>
 </body>
