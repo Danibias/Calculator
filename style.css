@@ -30,6 +30,7 @@
     height: 80px;
     background-color: rgb(58, 57, 57);
     margin-bottom: 1rem;
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
 }
 
 .calc-body {
