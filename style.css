@@ -6,44 +6,80 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Digital-7;
+    src: url(digital-7/digital-7.ttf)
+}
+
+:root {
+    /* Canvas */
+    --canvas: rgb(48, 48, 68);
+    /* Calc */
+
+    --calc-border: 1px solid rgb(71, 71, 71);
+    --calc-bg: rgb(37, 37, 37);
+    /* Display */
+
+    --display-bg: rgb(35, 36, 41);
+    --display-boxShw: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+    --display-digits: rgb(233, 229, 229);
+    /* Digits */
+    --digit-col: white;
+    --digit-inset-boxShw: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.6)
+    /*numbers  */
+    --digit-num-bg: #565261;
+    --digit-num-boxShw: 0 4px #565261;
+    
+}
+
 .canvas {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(48, 48, 68);
+    background-color: var(--canvas);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Calculator styles */
+
 .calculator {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(71, 71, 71);
+    border: var(--calc-border);
     border-radius: 6px;
     padding: 1rem;
-    background-color: grey;
+    background-color: var(--calc-bg);
     width: 250px;
 }
 
 .display {
     width: 100%;
     height: 80px;
-    background-color: rgb(58, 57, 57);
+    background-color: var(--display-bg);
     margin-bottom: 1rem;
-    box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
+    padding: .5rem;
+    box-shadow: var(--display-boxShw);
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    color: var(--display-digits);
+    font-family: Digital-7;
+    font-size: 80px;
 }
+
 
 .calc-body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
 }
 
-.row {
+.col {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 1;
     justify-content: space-between;
     justify-items: center;
@@ -51,7 +87,7 @@
 
 }
 
-.button {
+.digit {
     width: 100%;
     border-radius: 6px;
     padding: 4px;
@@ -59,18 +95,32 @@
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
     cursor: pointer;
-    color: white;
-    background-color: #af464f;
-    box-shadow: 0 4px #8b373e;
+    color: var(--digit-col);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
-.button:active {
+.number {
+    background-color: var(--digit-num-bg);
+    box-shadow: var(--digit-num-boxShw);
+    
+}
+
+.digit:active {
     box-shadow: none;
     transform: translateY(4px);
+    box-shadow: var(--digit-inset-boxShw);
 }
+
+.double {
+    flex: 2;
+}
+
+
+
+
 
 
 
