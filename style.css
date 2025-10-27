@@ -15,8 +15,9 @@
     /* Canvas */
     --canvas: rgb(48, 48, 68);
     /* Calc */
-    --calc-border: 1px solid rgb(71, 71, 71);
-    --calc-bg: rgb(37, 37, 37);
+    --calc-border: 1px solid rgb(43, 43, 43);
+    --calc-bg: rgb(71, 71, 71);
+    --calc-boxShw: 0 4px rgb(43, 43, 43);
     /* Display */
     --display-bg: rgb(35, 36, 41);
     --display-boxShw: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
@@ -24,9 +25,8 @@
     /* Digits */
     --digit-col: white;
     --digit-inset-boxShw: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
-    /*numbers  */
-    --digit-num-bg: #a79fbd;
-    --digit-num-boxShw: 0 4px #726c80;
+    --digit-bg: #a79fbd;
+    --digit-boxShw: 0 4px #726c80;
     /* operators */
     --operators-bg: rgb(3, 175, 175);
     --operator-boxShw: 0 4px rgb(4, 138, 138);
@@ -58,6 +58,7 @@
     padding: 1rem;
     background-color: var(--calc-bg);
     width: 250px;
+    box-shadow: var(--calc-boxShw);
 }
 
 .display {
@@ -93,7 +94,9 @@
 
 }
 
-.digit {
+/* Buttons */
+
+button {
     width: 100%;
     border-radius: 6px;
     padding: 4px;
@@ -101,22 +104,22 @@
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
     cursor: pointer;
-    color: var(--digit-col);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
+    color: var(--digit-col);
 }
 
-.number {
-    background-color: var(--digit-num-bg);
-    box-shadow: var(--digit-num-boxShw);
-}
-
-.digit:active {
+button:active {
     box-shadow: none;
     transform: translateY(4px);
     box-shadow: var(--digit-inset-boxShw);
+}
+
+.digit {
+    background-color: var(--digit-bg);
+    box-shadow: var(--digit-boxShw);
 }
 
 .double {
