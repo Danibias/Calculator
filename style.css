@@ -15,20 +15,27 @@
     /* Canvas */
     --canvas: rgb(48, 48, 68);
     /* Calc */
-
     --calc-border: 1px solid rgb(71, 71, 71);
     --calc-bg: rgb(37, 37, 37);
     /* Display */
-
     --display-bg: rgb(35, 36, 41);
     --display-boxShw: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
-    --display-digits: rgb(233, 229, 229);
+    --display-digits: rgb(226, 229, 231);
     /* Digits */
     --digit-col: white;
-    --digit-inset-boxShw: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.6)
+    --digit-inset-boxShw: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
     /*numbers  */
-    --digit-num-bg: #565261;
-    --digit-num-boxShw: 0 4px #565261;
+    --digit-num-bg: #a79fbd;
+    --digit-num-boxShw: 0 4px #726c80;
+    /* operators */
+    --operators-bg: rgb(3, 175, 175);
+    --operator-boxShw: 0 4px rgb(4, 138, 138);
+    /* functions */
+    --function-bg: #675691;
+    --function-boxShw: 0 4px #4a3e69;
+    /* control */
+    --control-bg: rgb(151, 56, 85);
+    --control-boxShw: 0 4px rgb(109, 38, 59);
     
 }
 
@@ -47,7 +54,7 @@
     display: flex;
     flex-direction: column;
     border: var(--calc-border);
-    border-radius: 6px;
+    border-radius: .5rem;
     padding: 1rem;
     background-color: var(--calc-bg);
     width: 250px;
@@ -55,25 +62,24 @@
 
 .display {
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: var(--display-bg);
-    margin-bottom: 1rem;
     padding: .5rem;
     box-shadow: var(--display-boxShw);
     display: flex;
     justify-content: flex-end;
-    align-items: stretch;
+    align-items: center;
     color: var(--display-digits);
     font-family: Digital-7;
-    font-size: 80px;
+    font-size: 47px;
 }
-
 
 .calc-body {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
+    margin-top: 1rem;
     gap: 8px;
 }
 
@@ -105,7 +111,6 @@
 .number {
     background-color: var(--digit-num-bg);
     box-shadow: var(--digit-num-boxShw);
-    
 }
 
 .digit:active {
@@ -116,6 +121,26 @@
 
 .double {
     flex: 2;
+}
+
+.operator {
+    background-color: var(--operators-bg);
+    box-shadow: var(--operator-boxShw);
+}
+
+.function {
+    background-color: var(--function-bg);
+    box-shadow: var(--function-boxShw);
+}
+
+.control {
+    background-color: var(--control-bg);
+    box-shadow: var(--control-boxShw);
+    font-size: 18px;
+}
+
+.material-symbols-outlined {
+    font-size: 21px !important;
 }
 
 
