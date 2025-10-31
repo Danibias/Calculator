@@ -23,6 +23,7 @@ let displayValue = "";
 let firstNumber = null;
 let operator = null;
 let secondNumber = null;
+const maxDigits = 10;
 
 const display = document.querySelector(".display");
 
@@ -33,17 +34,23 @@ const updateDisplay = () => {
 
 const digits = document.querySelectorAll(".digit");
 
-// show numeric characters only
 digits.forEach(button => {
     button.addEventListener("click", () => {
+        // show numeric characters only
         const digit = button.textContent;
         if (digit === "." && displayValue.includes(".") || digit === "=")return; 
-        {
-            displayValue += digit;
-            updateDisplay();
-        }
+
+        // Count and show only 9 digits on the screen,ignoring the decimal point and sign.
+        const digitCount = displayValue.replace(/[^0-9.]/g, "").length;
+        if (digitCount >= maxDigits) return;
+
+        // update the display
+        displayValue += digit;
+        updateDisplay();
     });
 });
+
+
 
 /**
  * Clear buttons
