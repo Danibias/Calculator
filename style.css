@@ -65,14 +65,18 @@
     width: 100%;
     height: 70px;
     background-color: var(--display-bg);
-    padding: .5rem;
+    padding: 6px;
     box-shadow: var(--display-boxShw);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: var(--display-digits);
     font-family: Digital-7;
-    font-size: 47px;
+    font-size: 3rem;
+}
+
+.display.error {
+    font-size: 1rem;
 }
 
 .calc-body {
