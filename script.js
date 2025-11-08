@@ -62,7 +62,10 @@ const updateDisplay = () => {
     display.textContent = displayValue || "0";
 }
 
-// digits
+/**
+ * Digits
+ */
+
 const digits = document.querySelectorAll(".digit");
 
 digits.forEach(button => {
@@ -99,7 +102,6 @@ digits.forEach(button => {
         updateDisplay();
     });
 });
-
 
 /**
  * Operators
@@ -326,4 +328,21 @@ document.getElementById("delete").addEventListener("click", () => {
     updateDisplay();
 });
 
+/**
+ * Keyboard support
+ */
+
+window.addEventListener("keydown", (e) => {
+    const key = e.key;
+    
+    if (key === "Enter" || key === "backspace") e.preventDefault();
+
+    let btn = document.querySelector(`[data-key = "${key}"]`);
+
+    if (!btn) {
+        if (key === "=") btn = document.querySelector(`[data-key = "Enter"]`);
+    }
+
+    if(btn) btn.click();
+});
 
